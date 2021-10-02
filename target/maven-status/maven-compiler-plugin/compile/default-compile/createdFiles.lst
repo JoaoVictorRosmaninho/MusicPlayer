@@ -1,0 +1,12 @@
+model\Autor.class
+controller\musicController.class
+model\Contato.class
+controller\userController.class
+model\dao\autorDaoJPA.class
+model\dao\ConnFactory.class
+model\Musica.class
+model\dao\musicDaoJPA.class
+model\dao\daoFactory.class
+model\dao\InterfaceDao.class
+model\dao\userDaoJPA.class
+model\User.class

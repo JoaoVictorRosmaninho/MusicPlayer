@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="styles/stylePlayer.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+  
+</head>
+<body>
+  <div class="wrapper">
+    <div class="top-bar">
+      <img src="dekuAll.jpg" alt="">
+      <span>Now Playing</span>
+      <i class="material-icons" id="menu">more_horiz</i>
+    </div>
+    <div class="img-area">
+      <img src="" alt="">
+    </div>
+    <div class="song-details">
+      <p class="name"></p>
+      <p class="artist"></p>
+    </div>
+    <div class="progress-area">
+      <div class="progress-bar">
+        <audio id="main-audio" src=""></audio>
+      </div>
+      <div class="song-timer">
+        <span class="current-time">0:00</span>
+        <span class="max-duration">0:00</span>
+      </div>
+    </div>
+    <div class="controls">
+      <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+      <i id="prev" class="material-icons">skip_previous</i>
+      <div class="play-pause">
+        <i class="material-icons play">play_arrow</i>
+      </div>
+      <i id="next" class="material-icons">skip_next</i>
+      <i id="more-music" class="material-icons">queue_music</i>
+    </div>
+    <div class="music-list">
+      <div class="header">
+        <div class="row">
+          <i class= "list material-icons">queue_music</i>
+          <span>Music list</span>
+        </div>
+        <i id="close" class="material-icons">close</i>
+      </div>
+      <ul>
+        <!-- here li list are coming from js -->
+        <li>
+            <div>
+                <p>Nome da musica</p>
+                <p>Nome do autor</p>
+            </div>
+            <div>
+                botões
+            </div>
+        </li>
+      </ul>
+    </div>
+    <div class="menu" id="dropdown">
+        <div id="formAddMusic"><i class="material-icons">add</i><p> Musica </p></div>
+        <div><i class="material-icons">logout</i><p> Sair </p></div>
+    </div>
+  </div>
+    
+    <div class="add-music">
+        <form method="POST" action="musicController" enctype="multipart/form-data">
+            <label>Nome da música:</label><br>
+            <input name="txtMusic" style="display: block; width: 100%;">
+            <label>Nome do autor:</label><br>
+            <input name="txtAutor" style="display: block; width: 100%;"><br>
+            <label for="myfileIMG" id="selectIMG" style="background: #fff; border: 1px solid #333;margin-top: 15px; cursor: pointer; display: block;text-align: center;">Selecione a imagem:</label>
+            <input type="file" class="selectFiler" id="myfileIMG" name="myfileIMG" accept="image/*" style="display: none;width: 1px;height: 1px;">
+            <label for="myfileMP3" id="selectMP3" style="background: #fff; border: 1px solid #333;margin-top: 15px; cursor: pointer; display: block;text-align: center;">Selecione a música:</label>
+            <input type="file" class="selectFiler" id="myfileMP3" name="myfileMP3" accept="audio/*" style="display: none;width: 1px;height: 1px;"><br>
+            <button type="button" class="closeForm">Cancelar</button>
+            <button type="submit" class="closeForm">Adicionar</button>
+        </form>
+    </div>
+
+  <script src="js/music-list.js"></script>
+  <script src="js/script.js"></script>
+  
+</body>
+</html>

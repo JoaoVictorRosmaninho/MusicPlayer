@@ -1,2 +1,2 @@
 # MusicPlayer
-Player Music with jpa
+Java Music Player with JPA 
